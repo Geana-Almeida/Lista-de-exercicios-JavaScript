@@ -1,15 +1,34 @@
-var num = 0
+tot = 0
 
-function sim(){
-    numero = document.getElementById('num')
-    num += Number(numero.value)
+function verificar(){
+    num = document.getElementById('num')//4 obj
+    veri_string = document.getElementById('ver')//SIM  obj
+    res = document.getElementById('res')
     
     
+    veri_string = String(veri_string.value) //SIM string
+    num = Number(num.value)
+      
+    
+    
+    if(veri_string == "SIM"){
+        tot += num
+        res.innerHTML = tot
+    }
+    else if(veri_string == "NAO"){
+        tot = 0
+        
+    }
 
+    else{
+        window.alert("Resposta inválida.")
+    }
+
+    
+    
+    
+    
+    
 }
 
 
-function nao(num){
-    document.getElementById('res').value = num
-    num = 0
-}
